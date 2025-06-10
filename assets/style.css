@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* === Body & Layout === */
+body {
+    background: linear-gradient(89deg, #125386 40.48%, #578CB6 98.8%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* === Container === */
+.container {
+    width: 25%;
+    margin: 8% 5%;
+    padding: 3%;
+    border-radius: 29px;
+    background: #BADEFB;
+}
+
+/* === Logo === */
+.logo {
+    text-align: center;
+}
+
+/* === Header === */
+header {
+    color: #0E3F66;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* === Form === */
+form {
+    margin-top: 30px;
+}
+
+.form.login {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* === Fields === */
+.form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.field input,
+.field button {
+    height: 100%;
+    width: 95%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.field input {
+    outline: none;
+    margin: 10px;
+    padding: 10px 15px;
+    border: 1px solid #176BAD;
+    background: #FFF;
+    border-radius: 10px;
+}
+
+.field button {
+    color: #fff;
+    background: #176BAD;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.field button:hover {
+    background-color: #016dcb;
+}
+
+/* === Links === */
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link p,
+.form-link a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+
+/* === Description Section === */
+.des {
+    width: 50%;
+    margin: auto;
+    font-size: 35px;
+    color: #E9F5FE;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* === Responsive Design === */
+@media (max-width: 912px) {
+    body {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+        margin: 25% 5%;
+    }
+
+    .field input,
+    .field button {
+        width: 95%;
+    }
+
+    .des {
+        display: none;
+    }
+
+    
+}
