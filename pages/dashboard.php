@@ -1,10 +1,13 @@
 <?php
 session_start();
 
+
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit();
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,32 +36,5 @@ if (!isset($_SESSION['user_id'])) {
     <footer>
         <p>&copy; <?= date("Y") ?> PharmaLink. All rights reserved.</p>
     </footer>
-
-    <script>
-    let timeoutDuration = 60000; 
-    let warningDuration = 5000; 
-    let timeout, warning;
-
-    function resetTimer() {
-        clearTimeout(timeout);
-        clearTimeout(warning);
-
-        // Show warning 5 seconds before actual logout
-        warning = setTimeout(() => {
-            alert("You will be logged out due to 1 minute of inactivity.");
-        }, timeoutDuration - warningDuration);
-
-        
-        timeout = setTimeout(() => {
-            window.location.href = "../components/logout.php?reason=timeout";
-        }, timeoutDuration);
-    }
-
-    window.onload = resetTimer;
-    document.onmousemove = resetTimer;
-    document.onkeydown = resetTimer;
-    document.onclick = resetTimer;
-    document.onscroll = resetTimer;
-    </script>
 </body>
 </html>
