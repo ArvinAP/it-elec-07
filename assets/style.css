@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* === Body & Layout === */
@@ -14,20 +14,22 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 /* === Container === */
 .container {
     width: 25%;
-    margin: 8% 5%;
     padding: 3%;
     border-radius: 29px;
     background: #BADEFB;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 /* === Logo === */
 .logo {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 /* === Header === */
@@ -36,52 +38,46 @@ header {
     text-align: center;
     font-size: 40px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 /* === Form === */
 form {
-    margin-top: 30px;
-}
-
-.form.login {
-    opacity: 0;
-    pointer-events: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 /* === Fields === */
 .form .field {
     position: relative;
-    height: 50px;
     width: 100%;
-    margin-top: 20px;
     border-radius: 6px;
 }
 
 .field input,
-.field button {
-    height: 100%;
+.field button,
+.field select {
     width: 95%;
     border: none;
     font-size: 16px;
     font-weight: 400;
-    border-radius: 6px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 10px auto;
+    display: block;
 }
 
-.field input {
-    outline: none;
-    margin: 10px;
-    padding: 10px 15px;
+.field input,
+.field select {
     border: 1px solid #176BAD;
     background: #FFF;
-    border-radius: 10px;
 }
 
 .field button {
     color: #fff;
     background: #176BAD;
-    margin: 10px;
-    padding: 10px 15px;
-    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -101,9 +97,14 @@ form {
     font-size: 14px;
     font-weight: 400;
     color: #232836;
+    text-decoration: none;
 }
 
-/* === Description Section === */
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+/* === Description Section (Right Panel) === */
 .des {
     width: 50%;
     margin: auto;
@@ -122,18 +123,29 @@ form {
 
     .container {
         width: 90%;
-        height: auto;
         margin: 25% 5%;
     }
 
     .field input,
-    .field button {
+    .field button,
+    .field select {
         width: 95%;
     }
 
     .des {
         display: none;
     }
+}
 
-    
+/* === Alerts & Messages === */
+p.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+p.success {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
 }
